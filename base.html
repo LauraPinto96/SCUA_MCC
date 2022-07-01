@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+    {% block titele%}
+    {% endblock %}
+
+
+</title>
+
+</head>
+<body>
+    <h1 style="background-color: darkgreen; color:blanchedalmond; text-align: center"> SCUA UIS COLOMBIA </h1>
+    <h3>Cohetería </h3>
+    {% include "superior/barra.html" %}
+
+    {% block content %}{% endblock %}
+    
+    <p style="background-color: darkgreen; color:blanchedalmond; text-align: right;"> Gracias por su visita</p>
+
+</body>
+
+</html>

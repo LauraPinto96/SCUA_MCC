@@ -1,0 +1,37 @@
+<html>
+    <body>
+    <h1 style="color:darkgreen">
+    Semillero Investigaci&oacute;n SCUA CEMOS -primera plantilla
+    </h1>   
+
+    {% include "superior/barra.html" %}
+
+
+    {# Nos graduamos!!!#}
+
+
+    <p><strong>Desarrolladores:{{nombre_persona.upper}} {{apellido_persona.upper}}</strong></p>
+    <p>Hoy es d&iacute;a: {{momento_actual}} </p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+        {% if temas%}
+
+            {%for eltema in temas %}
+             <li>{{eltema}}</li>
+
+            {% endfor %}
+            {% else %}
+            <p>No hay elementos por mostrar</p>
+        {% endif %}
+    </ul>
+    </p>
+    {% include "altura.html" %}
+    {% include "camaras.html" %}
+    {% include "cansat.html" %}
+    {% include "eyeccion.html" %}
+    {% include "giroscopio.html" %}
+    {% include "localizacion.html" %}
+    {% include "mision.html" %}
+    </body>
+    </html>
