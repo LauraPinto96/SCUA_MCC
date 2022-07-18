@@ -13,13 +13,13 @@ gData.append([0])
 fig = plt.figure()
 ax = fig.add_subplot(111)
 hl, = plt.plot(gData[0], gData[1])
-plt.ylim(0, 1023)
-plt.xlim(0,1023)
+plt.ylim(-2, 2)
+plt.xlim(0,500)
 
 # Función que se va a ejecutar en otro thread
 # y que guardará los datos del serial en 'out_data'
 def GetData(out_data):
-    with serial.Serial('/dev/ttyACM1',9600, timeout=1) as ser:
+    with serial.Serial('COM6',9600, timeout=1) as ser:
         print(ser.isOpen())
         while True:
             line = ser.readline().decode('utf-8')         
