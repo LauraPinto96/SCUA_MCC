@@ -19,7 +19,7 @@ plt.xlim(0,1023)
 # Función que se va a ejecutar en otro thread
 # y que guardará los datos del serial en 'out_data'
 def GetData(out_data):
-    with serial.Serial('\\.\COM4',9600, timeout=1) as ser:
+    with serial.Serial('/dev/ttyACM1',9600, timeout=1) as ser:
         print(ser.isOpen())
         while True:
             line = ser.readline().decode('utf-8')         
