@@ -49,7 +49,7 @@ while(presionTmp > 0):
     #"HUM"
     HUM.append(round(rd.uniform(0,99),4))
     #"TEMP"
-    TEMP.append(round(rd.uniform(0,99),4))
+    TEMP.append(round(rd.uniform(-40,30),4))
     #"PRES"
     PRES.append(presionTmp)
     #"CO"
@@ -94,4 +94,4 @@ df = pd.DataFrame(list(zip(GPSLAT, GPSLON, GPSALT, GPSSPE, \
 #print(df)
 
 #Export pandas dataframe to a .csv file
-df.to_csv('./SCUA_MCC/CreatedData/CrudaDataCansat.csv',sep='\t')
+df.to_csv('./CreatedData/CrudaDataCansat.csv',sep='\t')

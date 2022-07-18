@@ -72,5 +72,5 @@ df = pd.DataFrame(list(zip(Accx, Accy, Accz, Apogeo1, Apogeo2, \
 #print(df)
 
 #Export pandas dataframe to a .csv file
-df.to_csv('./SCUA_MCC/CreatedData/CrudaData1.csv',sep='\t')
+df.to_csv('./CreatedData/CrudaData1.csv',sep='\t')
     
