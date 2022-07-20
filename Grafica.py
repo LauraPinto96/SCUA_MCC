@@ -1,15 +1,9 @@
-import serial
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-import re
-import threading
 import serial,time,collections
 import matplotlib.pyplot as plt
 import matplotlib.animation as animacion
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from threading import Thread
 from tkinter import Tk, Frame, StringVar, Label,Button,Entry
-import pyfirmata
 
 isReceiving= False 
 isRun = True 
@@ -18,8 +12,8 @@ muestraD = 100
 data = collections.deque([0]*muestraD, maxlen=muestraD)
 xmin = 0
 xmax = muestraD
-ymin = -5
-ymax = 5 
+ymin = 100
+ymax = 300 
 
 #"/dev/ttyUSBB"
 
@@ -111,7 +105,7 @@ frame = Frame(raiz, width = 130,height = 402, bg = "#7003FC")
 frame.grid(row = 0,column = 1, padx = 1,pady = 2)
 frame.grid_propagate(False)
 frame.config(relief = "sunken")
-frame.config(cursor = "heart")
+frame.config(cursor = "arrow")
 
 labelx = StringVar(raiz, "VOL: 0.00")
 

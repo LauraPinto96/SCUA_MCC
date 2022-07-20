@@ -58,8 +58,32 @@ if __name__ == '__main__':
 """
 
 import serial
+import matplotlib.pyplot as plt
 
 gData = []
+gData.append([0.0])
+gData.append([0.0])
+
+def getData(out_data):
+    with serial.Serial("/dev/ttyACM0",9600) as ser:
+        while True:
+            line = ser.readline().decode('utf-8')
+            try:
+                out_data[1].append(float(line))
+                if len(out_data[1]) > 200:
+                    out_data[1].pop(0)
+            except:
+                pass
+
+def menu():
+    
+
+if __name__ == '__main__':
+    main()
+
+""" 
+gData = []
+#This lines helps
 gData.append([0.0])
 gData.append([0.0])
 
@@ -74,3 +98,4 @@ with serial.Serial("/dev/ttyACM0",9600) as ser:
             pass
     
         print(gData[1])
+"""
